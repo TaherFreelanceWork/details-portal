@@ -1,11 +1,11 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 
 import * as types from '../actions/actionTypes';
-import api from '../api/api';
+import { fetchLocation } from '../api/api';
 
 function* fetchGetLocation(action) {
 	try {
-		const getLocation = yield call(api.fetchLocation);
+		const getLocation = yield call(fetchLocation);
 		yield put({
 			type: types.GET_LOCATION_SUCCESS,
 			locationDetails: getLocation.data,

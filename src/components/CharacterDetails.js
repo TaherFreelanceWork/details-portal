@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export default class CharacterDetails extends Component {
 	render() {
-		console.log('character details:', this.props.location.state.characterDetails);
 		const characterDetails = this.props.location.state && this.props.location.state.characterDetails;
 		return (
 			<div className="character-details-main">
