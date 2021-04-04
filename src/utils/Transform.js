@@ -1,4 +1,4 @@
-const transformLocationData = (data) => {
+export const transformLocationData = (data) => {
 	return (
 		data &&
 		data.map((_, index) => {
@@ -10,8 +10,4 @@ const transformLocationData = (data) => {
 			};
 		})
 	);
-};
-
-export default {
-	transformLocationData,
 };
