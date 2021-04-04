@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './main.less';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -12,4 +13,5 @@ ReactDOM.render(
 	document.getElementById('root'),
 );
 
+serviceWorkerRegistration.register();
 reportWebVitals();
