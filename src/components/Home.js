@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import transform from '../utils/Transform';
+import { transformLocationData } from '../utils/Transform';
 import DropdownComponent from '../common-components/DropdownComponent';
 import CardComponent from '../common-components/CardComponent';
 
@@ -21,11 +21,8 @@ export default class Home extends Component {
 	};
 
 	render() {
-		const { locationDetails, locationIdDetails, residentDetails } = this.props;
-		const filterLocation = transform.transformLocationData(locationDetails && locationDetails.results);
-		console.log('Filter location:', filterLocation);
-		console.log('details:', locationIdDetails);
-		console.log('Store resident details:', residentDetails);
+		const { locationDetails, residentDetails } = this.props;
+		const filterLocation = transformLocationData(locationDetails && locationDetails.results);
 		return (
 			<div className="home-main">
 				{filterLocation && (

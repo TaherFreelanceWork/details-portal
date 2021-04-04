@@ -1,14 +1,13 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 
 import * as types from '../actions/actionTypes';
-import api from '../api/api';
+import { fetchLocationById, fetchResidentDetails } from '../api/api';
 
 function* fetchGetLocationId(action) {
 	try {
-		const getLocationId = yield call(api.fetchLocationById, action.id);
+		const getLocationId = yield call(fetchLocationById, action.id);
 		const residentsDetails = getLocationId && getLocationId.data && getLocationId.data.residents;
-		const getResidentDetails = yield call(api.fetchResidentDetails, residentsDetails);
-		console.log('get residential details:', getResidentDetails);
+		const getResidentDetails = yield call(fetchResidentDetails, residentsDetails);
 		yield put({
 			type: types.GET_LOCATION_ID_SUCCESS,
 			locationIdDetails: getLocationId.data,
