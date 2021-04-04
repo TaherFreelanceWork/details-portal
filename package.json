@@ -82,7 +82,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && http-server ./build",
+    "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "start-sw": "http-server ./build"
   },
