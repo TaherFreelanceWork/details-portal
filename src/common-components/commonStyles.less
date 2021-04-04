@@ -1,0 +1,55 @@
+.card-details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	.card-main {
+		display: flex;
+		border: 1px solid #bebebe;
+		width: 625px;
+		height: 220px;
+		background: rgb(60, 62, 68);
+		border-radius: 0.5rem;
+		margin: 0.75rem;
+		box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+		color: #ffffff;
+		overflow: hidden;
+		.card-content {
+			width: 100%;
+			padding: 20px;
+			.card-name {
+				font-size: 30px;
+				cursor: pointer;
+			}
+			.card-name:hover {
+				color: rgb(255, 152, 0);
+			}
+			.card-status {
+				display: flex;
+				align-items: center;
+				margin-top: 5px;
+				.card-status-text {
+					font-size: 16px;
+				}
+			}
+			.card-location-header {
+				margin-top: 24px;
+				color: rgb(158, 158, 158);
+				font-size: 16px;
+			}
+			.card-location {
+				font-size: 18px;
+				margin-top: 5px;
+			}
+		}
+	}
+	.no-resident-found {
+		font-size: 30px;
+		color: #bebebe;
+		font-weight: bold;
+	}
+}
+
+.dropdown-main {
+	text-align: center;
+	margin-bottom: 20px;
+}
